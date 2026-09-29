@@ -39,8 +39,7 @@ Menu and game flow:
 - **Pause** — pause / un-pause the game.
 - **Shift + Esc** — quit.
 
-Plain Esc does not quit, because on Android a right mouse
-click generates an Esc keypress at the kernel level.
+Plain Esc does nothing.
 
 ---
 
