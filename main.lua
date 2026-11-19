@@ -386,9 +386,18 @@ end
 actions.play.pause = toggle_pause
 actions.paused.pause = toggle_pause
 
-for _, v in pairs(actions) do
-  v.escape = love.event.quit
+function goBack()
+  if GS.mode == "paused" then
+    toggle_pause()
+  elseif GS.mode == "start" then
+    stop()
+  else
+    actions.play.r()
+  end
 end
+
+compy.input.shortcuts.keypressed.escape = compy.input.fn.
+    stop_here(compy.input.fn.ignore_repeat(goBack))
 
 -- Drawing
 
@@ -626,12 +635,6 @@ function love.mousemoved(x, y, dx, dy)
 end
 
 function love.keypressed(k)
-  if k == "escape" then
-    local d = love.keyboard.isDown
-    if not (d("lshift") or d("rshift")) then
-      return
-    end
-  end
   local action = actions[GS.mode][k]
   if action then
     action()

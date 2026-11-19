@@ -37,9 +37,8 @@ Menu and game flow:
 - **2** — switch to two-player (manual) mode.
 - **E** — force Easy mode.
 - **Pause** — pause / un-pause the game.
-- **Shift + Esc** — quit.
-
-Plain Esc does nothing.
+- **Esc** — unpause, return to the start screen, or leave from
+  the start screen.
 
 ---
 
